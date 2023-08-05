@@ -1,27 +1,24 @@
-# AngularElementMicroFrontend
+## Creating micro-frontend architecture using angular element
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.1.
+Created a workspace using `ng new angular-elememt-micro-frontend --createApplication="false"`
 
-## Development server
+Or else we can create seperate separate applications also to implement this architecture
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Under the workspace, created three project for three applications
 
-## Code scaffolding
+navigate to workspace folde by `cd angular-elememt-micro-frontend` then
+run command `ng generate application <project_name>` to create project
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Base Application
+2. Micro-Frontend-One
+3. Micro-frontend-two
 
-## Build
+## Installed angular element package
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+run commad `ng add @angular/elements`
 
-## Running unit tests
+## make as micro-front application for Micro-Frontend-One & Micro-frontend-two and build that file to serve
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+run this two application thorugh http-server
+step1: `cd dist/<project-name>`
+step2: `http-server -p <diff-port>`
